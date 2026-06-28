@@ -740,7 +740,7 @@ window.OLIVIA_I18N["zh-Hant"] = Object.assign(window.OLIVIA_I18N["zh-Hant"], {
   "contact.galleryKicker": "",
   "contact.galleryTitle": "",
   "contact.arrivalTitle": "抵達禮賓",
-  "contact.contactTitle2": "來訪，是另一種生活的開始。",
+  "contact.contactTitle2": "來訪，另一種生活",
   "contact.contactBody2": "我們在宜蘭三星，等待一段剛剛好的停留。"
 });
 
@@ -876,7 +876,7 @@ window.OLIVIA_I18N["en"] = Object.assign(window.OLIVIA_I18N["en"], {
   "contact.galleryKicker": "contact editorial",
   "contact.galleryTitle": "Arrival Journal",
   "contact.arrivalTitle": "Arrival Concierge",
-  "contact.contactTitle2": "Arrival is the beginning of another way of living.",
+  "contact.contactTitle2": "the beginning of living.",
   "contact.contactBody2": "We are here in Sanxing, Yilan, waiting for a stay that feels just right."
 });
 
