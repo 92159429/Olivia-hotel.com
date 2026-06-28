@@ -1,0 +1,87 @@
+/* Olivia Design System 1.0 — Phase 1 Responsive Rules */
+
+@media (min-width: 1600px) {
+  .container {
+    width: min(calc(100% - (var(--container-margin-xl) * 2)), var(--container-max));
+  }
+
+  .container--wide {
+    max-width: min(calc(100% - (var(--container-margin-xl) * 2)), 1480px);
+  }
+}
+
+@media (max-width: 1279px) {
+  :root {
+    --grid-gap: 24px;
+    --grid-gap-lg: 32px;
+    --section-y: 96px;
+    --section-y-compact: 72px;
+    --reading-width: 640px;
+    --reading-width-wide: 760px;
+  }
+
+  .container {
+    width: min(calc(100% - (var(--container-margin-md) * 2)), var(--container-max));
+  }
+
+  .tablet-span-12 { grid-column: 1 / -1; }
+  .tablet-span-6 { grid-column: span 6; }
+  .tablet-span-4 { grid-column: span 4; }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --grid-gap: 20px;
+    --grid-gap-lg: 24px;
+    --section-y: 72px;
+    --section-y-compact: 56px;
+    --reading-width: 100%;
+    --reading-width-wide: 100%;
+    --reading-width-narrow: 100%;
+  }
+
+  .container,
+  .container--wide,
+  .container--narrow {
+    width: calc(100% - (var(--container-margin-sm) * 2));
+    max-width: none;
+  }
+
+  .grid-12,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  [class*="span-"],
+  [class*="start-"] {
+    grid-column: 1 / -1;
+  }
+
+  .stack {
+    gap: var(--space-20, 20px);
+  }
+
+  .stack--lg,
+  .stack--xl {
+    gap: var(--space-32);
+  }
+
+  .mobile-center {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+@media (max-width: 479px) {
+  :root {
+    --container-margin-sm: 20px;
+    --section-y: 64px;
+    --section-y-compact: 48px;
+  }
+}

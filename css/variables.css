@@ -1,0 +1,120 @@
+/* Olivia Design System 1.0 — Variables */
+
+:root {
+  /* Brand type */
+  --font-serif: "Bodoni Moda", "Noto Serif TC", "Songti TC", serif;
+  --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+
+  /* Typography scale */
+  --text-hero: clamp(2.5rem, 5vw, 4rem);
+  --text-h1: clamp(2rem, 3.8vw, 3rem);
+  --text-h2: clamp(1.75rem, 3vw, 2.25rem);
+  --text-h3: clamp(1.375rem, 2.2vw, 1.75rem);
+  --text-lead: clamp(1.0625rem, 1.45vw, 1.25rem);
+  --text-body: clamp(1rem, 1vw, 1.125rem);
+  --text-small: 0.875rem;
+  --text-meta: 0.8125rem;
+  --text-eyebrow: 0.75rem;
+
+  /* Typography rhythm */
+  --leading-display: 1.08;
+  --leading-title: 1.18;
+  --leading-subtitle: 1.32;
+  --leading-lead: 1.72;
+  --leading-body: 1.82;
+  --leading-small: 1.65;
+  --leading-zh: 1.86;
+  --leading-en: 1.7;
+
+  /* Typography tracking */
+  --tracking-display: -0.025em;
+  --tracking-title: -0.015em;
+  --tracking-body: 0.015em;
+  --tracking-small: 0.025em;
+  --tracking-meta: 0.08em;
+  --tracking-caps: 0.18em;
+  --tracking-zh: 0.04em;
+  --tracking-en: 0.01em;
+
+  /* Pantone-inspired palette */
+  --color-papaya: #fea166;
+  --color-cocoa-creme: #dbc8b6;
+  --color-tea: #999b84;
+  --color-caramel: #c37b45;
+  --color-mango-mojito: #d69c2f;
+  --color-cloud-dancer: #f0eee9;
+  --color-espresso: #2d211d;
+  --color-ink: #1f1713;
+  --color-cream: #fff8ee;
+  --color-muted: rgba(31, 23, 19, 0.68);
+  --color-line: rgba(31, 23, 19, 0.18);
+  --color-line-light: rgba(255, 248, 238, 0.22);
+
+  /* Page surfaces */
+  --page-bg: var(--color-papaya);
+  --page-fg: var(--color-ink);
+  --surface: rgba(255, 248, 238, 0.72);
+  --surface-strong: rgba(255, 248, 238, 0.9);
+
+  /* Layout widths */
+  --container-max: 1320px;
+  --container-margin-xl: 96px;
+  --container-margin-lg: 72px;
+  --container-margin-md: 48px;
+  --container-margin-sm: 24px;
+
+  /* Grid */
+  --grid-columns: 12;
+  --grid-gap: 24px;
+  --grid-gap-lg: 40px;
+
+  /* Stable reading widths */
+  --reading-width: 720px;
+  --reading-width-wide: 840px;
+  --reading-width-narrow: 560px;
+
+  /* Spacing scale */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-72: 72px;
+  --space-96: 96px;
+  --space-120: 120px;
+  --space-160: 160px;
+
+  /* Section rhythm */
+  --section-y: 120px;
+  --section-y-compact: 96px;
+
+  /* Radius and shadow */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --shadow-soft: 0 24px 80px rgba(31, 23, 19, 0.16);
+  --shadow-card: 0 18px 48px rgba(31, 23, 19, 0.14);
+
+  /* Components */
+  --header-z: 50;
+  --header-blur: 18px;
+  --header-height: 132px;
+  --button-height: 44px;
+
+  /* Motion */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration-base: 360ms;
+  --duration-slow: 700ms;
+}
+
+body.page-index { --page-bg: var(--color-papaya); }
+body.page-stories { --page-bg: var(--color-cocoa-creme); }
+body.page-rooms { --page-bg: var(--color-tea); }
+body.page-cuisine { --page-bg: var(--color-caramel); }
+body.page-contact { --page-bg: var(--color-mango-mojito); }

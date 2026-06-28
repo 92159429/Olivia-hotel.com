@@ -1,0 +1,225 @@
+/* Olivia Design System 1.0 — Page Implementation */
+
+.page-index {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 248, 238, 0.35), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(45, 33, 29, 0.08), transparent 34%),
+    var(--page-bg);
+}
+
+.page-index .site-main,
+.page-stories .site-main,
+.page-rooms .site-main,
+.page-cuisine .site-main,
+.page-contact .site-main {
+  overflow: clip;
+}
+
+.page-index .hero,
+.page-stories .hero,
+.page-rooms .hero,
+.page-cuisine .hero,
+.page-contact .hero {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.page-index .hero-title {
+  max-width: 10ch;
+}
+
+.page-index .hero-description,
+.page-stories .hero-description,
+.page-rooms .hero-description,
+.page-cuisine .hero-description,
+.page-contact .hero-description {
+  color: rgba(31, 23, 19, 0.78);
+}
+
+.page-index .feature-band,
+.page-stories .feature-band,
+.page-contact .feature-band {
+  background: rgba(255, 248, 238, 0.62);
+}
+
+.page-index .room-card,
+.page-rooms .room-card {
+  height: 100%;
+}
+
+.page-index .room-card__body p,
+.page-rooms .room-card__body p {
+  color: rgba(31, 23, 19, 0.72);
+}
+
+.page-stories {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(255, 248, 238, 0.42), transparent 30%),
+    radial-gradient(circle at 90% 78%, rgba(45, 33, 29, 0.08), transparent 34%),
+    var(--page-bg);
+}
+
+.page-stories .hero-title {
+  max-width: 13ch;
+}
+
+.page-stories .gallery-grid figure {
+  min-height: 240px;
+}
+
+.page-stories .editorial-split__media {
+  align-self: start;
+}
+
+.page-rooms {
+  background:
+    radial-gradient(circle at 14% 10%, rgba(255, 248, 238, 0.28), transparent 30%),
+    radial-gradient(circle at 82% 70%, rgba(45, 33, 29, 0.12), transparent 34%),
+    var(--page-bg);
+}
+
+.page-rooms .hero-title {
+  max-width: 11ch;
+}
+
+.page-rooms .rooms-feature {
+  padding: var(--space-40);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 248, 238, 0.42);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-rooms .rooms-grid--collection .room-card__body {
+  min-height: 220px;
+  align-content: start;
+}
+
+.page-rooms .rooms-grid--collection .room-card__title {
+  min-height: 2.7em;
+}
+
+.page-cuisine {
+  background:
+    radial-gradient(circle at 10% 18%, rgba(255, 248, 238, 0.25), transparent 28%),
+    radial-gradient(circle at 88% 72%, rgba(45, 33, 29, 0.14), transparent 36%),
+    var(--page-bg);
+}
+
+.page-cuisine .hero-title {
+  max-width: 12ch;
+}
+
+.page-cuisine .editorial-card {
+  background: rgba(255, 248, 238, 0.54);
+}
+
+.page-cuisine .gallery-grid figure {
+  min-height: 240px;
+}
+
+.page-contact {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(255, 248, 238, 0.3), transparent 30%),
+    radial-gradient(circle at 84% 78%, rgba(45, 33, 29, 0.12), transparent 36%),
+    var(--page-bg);
+}
+
+.page-contact .hero-title {
+  max-width: 13ch;
+}
+
+.page-contact .contact-list {
+  background: rgba(255, 248, 238, 0.38);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+}
+
+.page-contact .contact-map {
+  overflow: hidden;
+  padding: 0;
+}
+
+.page-contact .contact-map iframe {
+  display: block;
+  width: 100%;
+}
+
+.page-contact .gallery-grid figure {
+  min-height: 240px;
+}
+
+/* Phase 12 — QA polish */
+.site-main img {
+  max-width: 100%;
+}
+
+.surface,
+.card,
+.editorial-card {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+}
+
+.page-index .hero-copy,
+.page-stories .hero-copy,
+.page-rooms .hero-copy,
+.page-cuisine .hero-copy,
+.page-contact .hero-copy {
+  padding-block: var(--space-24);
+}
+
+@media (max-width: 1023px) {
+  .page-section {
+    padding-block: var(--space-96);
+  }
+
+  .hero-copy--wide,
+  .hero-media--wide {
+    grid-column: 1 / -1;
+  }
+
+  .hero-media {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-section {
+    padding-block: var(--space-72);
+  }
+
+  .page-index .hero-title,
+  .page-stories .hero-title,
+  .page-rooms .hero-title,
+  .page-cuisine .hero-title,
+  .page-contact .hero-title {
+    max-width: none;
+  }
+
+  .page-index .hero-description .soft-break,
+  .page-stories .hero-title .soft-break,
+  .page-rooms .hero-title .soft-break {
+    display: none;
+  }
+
+  .page-rooms .rooms-feature {
+    padding: var(--space-24);
+  }
+
+  .page-rooms .rooms-grid--collection .room-card__body,
+  .page-rooms .rooms-grid--collection .room-card__title {
+    min-height: auto;
+  }
+
+  .page-contact .contact-list {
+    padding: var(--space-24);
+  }
+
+  .gallery-grid figure,
+  .page-stories .gallery-grid figure,
+  .page-cuisine .gallery-grid figure,
+  .page-contact .gallery-grid figure {
+    min-height: 220px;
+  }
+}

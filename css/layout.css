@@ -1,0 +1,201 @@
+/* Olivia Design System 1.0 — Phase 1 Layout System */
+
+body {
+  background: var(--page-bg);
+  color: var(--page-fg);
+  font-family: var(--font-sans);
+}
+
+/*
+  Container
+  A single horizontal boundary for all pages and all sections.
+*/
+.container {
+  width: min(calc(100% - (var(--container-margin-lg) * 2)), var(--container-max));
+  margin-inline: auto;
+}
+
+.container--narrow {
+  max-width: var(--reading-width);
+}
+
+.container--wide {
+  max-width: min(calc(100% - (var(--container-margin-lg) * 2)), 1480px);
+}
+
+/*
+  Section rhythm
+  All main sections share the same vertical spacing.
+*/
+.section {
+  padding-block: var(--section-y);
+}
+
+.section--compact {
+  padding-block: var(--section-y-compact);
+}
+
+.section--flush-top {
+  padding-block-start: 0;
+}
+
+.section--flush-bottom {
+  padding-block-end: 0;
+}
+
+/*
+  12-column grid
+*/
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.grid-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid--loose {
+  gap: var(--grid-gap-lg);
+}
+
+/* Column spans */
+.span-1 { grid-column: span 1; }
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+.span-4 { grid-column: span 4; }
+.span-5 { grid-column: span 5; }
+.span-6 { grid-column: span 6; }
+.span-7 { grid-column: span 7; }
+.span-8 { grid-column: span 8; }
+.span-9 { grid-column: span 9; }
+.span-10 { grid-column: span 10; }
+.span-11 { grid-column: span 11; }
+.span-12 { grid-column: 1 / -1; }
+
+.start-1 { grid-column-start: 1; }
+.start-2 { grid-column-start: 2; }
+.start-3 { grid-column-start: 3; }
+.start-4 { grid-column-start: 4; }
+.start-5 { grid-column-start: 5; }
+.start-6 { grid-column-start: 6; }
+.start-7 { grid-column-start: 7; }
+.start-8 { grid-column-start: 8; }
+.start-9 { grid-column-start: 9; }
+
+/* Stable reading widths */
+.reading {
+  max-width: var(--reading-width);
+}
+
+.reading--narrow {
+  max-width: var(--reading-width-narrow);
+}
+
+.reading--wide {
+  max-width: var(--reading-width-wide);
+}
+
+/* Composition utilities */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.stack--sm { gap: var(--space-16); }
+.stack--lg { gap: var(--space-40); }
+.stack--xl { gap: var(--space-64); }
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16) var(--space-24);
+  align-items: center;
+}
+
+.cluster--center {
+  justify-content: center;
+}
+
+.flow > * + * {
+  margin-block-start: var(--space-24);
+}
+
+.flow--sm > * + * {
+  margin-block-start: var(--space-16);
+}
+
+.flow--lg > * + * {
+  margin-block-start: var(--space-40);
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Surface and card primitives */
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+/* Media aspect ratios */
+.media {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.media > img,
+.media > picture,
+.media > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ratio-16x9 { aspect-ratio: 16 / 9; }
+.ratio-4x3 { aspect-ratio: 4 / 3; }
+.ratio-3x2 { aspect-ratio: 3 / 2; }
+.ratio-1x1 { aspect-ratio: 1 / 1; }
+.ratio-portrait { aspect-ratio: 4 / 5; }
+
+/* Prevent accidental layout drift */
+[class*="span-"] {
+  min-width: 0;
+}
